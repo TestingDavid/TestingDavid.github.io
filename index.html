@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/instascan.min.js"></script>
+        <script src="js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="stil.css" />
+    </head>
+    <body onload="calculateOverallPrice()">
+        <h1>Ihre Bestellliste:</h1>
+        <div>
+            <label for="field">Artikel hinz&uuml;fgen:</label><input type="text" name="article" id="field">
+            <button type="button" id="buttonAdd" onclick="addArticleTbl()">Hinzufügen</button>
+            <button type="button" id="buttonScan" onclick="addArticleScan()">Scannen</button>
+        </div>
+        <br>
+        <video id="preview"></video>
+        <br>
+        <table id="articleTbl">
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Anzahl</th>
+                    <th>Preis in €</th>
+                </tr>
+            </thead>
+            <tbody id="articleTblBody">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"><b>Gesamtpreis:</b></td>
+                    <td id="overallPrice"> </td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
